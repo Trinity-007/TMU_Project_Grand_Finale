@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TMU — Register</title>
+
+  <!-- INTERNAL CSS: drop-in, no external file needed -->
+  <style>
+    :root{
+      --brand-700:#005f73;
+      --brand-600:#0a9396;
+      --bg:#f4f9ff;
+      --card:#ffffff;
+      --muted:#666;
+      --danger:#d9534f;
+      --success:#2d8a4b;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#eaf6f8 0%, var(--bg) 100%);
+      color:#0b2b2f;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    header{
+      background: linear-gradient(90deg,var(--brand-700),var(--brand-600));
+      color:#fff;
+      padding:18px 20px;
+      display:flex;
+      gap:16px;
+      align-items:center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    header img{width:56px;height:56px;object-fit:contain;border-radius:6px}
+    header h1{font-size:1.05rem;margin:0;letter-spacing:0.2px}
+    header p{margin:0 0 0 12px;font-size:0.9rem;opacity:0.95}
+
+    main {
+      max-width: 960px;
+      margin: 34px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(6,22,25,0.06);
+    }
+
+    .form-grid {
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap: 20px;
+      align-items:start;
+    }
+
+    @media (max-width:920px){
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    .left {
+      padding-right: 6px;
+    }
+
+    .left h2{ margin:0 0 8px; color:var(--brand-700) }
+    .left p{ margin:0 0 18px; color:var(--muted) }
+
+    label {
+      display:block;
+      font-weight:600;
+      margin-top:10px;
+      margin-bottom:6px;
+      font-size:0.95rem;
+      color:#123234;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], select, textarea {
+      width:100%;
+      padding:10px 12px;
+      border:1px solid #d6e3e6;
+      border-radius:8px;
+      font-size:0.95rem;
+      background:#fff;
+      outline:none;
+      transition:box-shadow .12s, border-color .12s;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--brand-600); box-shadow: 0 4px 14px rgba(10,147,150,0.08); }
+
+    .note { font-size:0.9rem; color:var(--muted); margin-top:8px; }
+
+    .submit-row {
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    button.primary {
+      background: linear-gradient(90deg,var(--brand-600),var(--brand-700));
+      color:white;
+      border:none;
+      padding:10px 14px;
+      border-radius:8px;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow: 0 6px 18px rgba(10,147,150,0.12);
+    }
+    button.primary:disabled { opacity:0.6; cursor:default; transform:none; box-shadow:none; }
+
+    a.small { font-size:0.92rem; color:var(--brand-700); text-decoration:none; }
+    a.small:hover { text-decoration:underline; }
+
+    /* Right column: benefits / quick info */
+    .right {
+      background: linear-gradient(180deg,#fbffff, #f1fbfb);
+      border-radius:10px;
+      padding:16px;
+      border:1px solid #e6f5f5;
+      min-height:100%;
+    }
+    .right h3 { margin:0 0 8px; color:var(--brand-700); font-size:1.05rem }
+    .right ul { padding-left:18px; margin:8px 0 0; color: #234; }
+    .right li { margin-bottom:8px; color: #235; line-height:1.45 }
+
+    /* message box */
+    .msg {
+      margin-top:14px;
+      padding:12px 14px;
+      border-radius:8px;
+      display:none;
+      font-weight:600;
+    }
+    .msg.show { display:block; }
+    .msg.error { background:#fff0f0; color:var(--danger); border:1px solid #f2c0c0 }
+    .msg.success { background:#f0fff6; color:var(--success); border:1px solid #bfe6c9 }
+
+    /* small helper */
+    .small-help { font-size:0.88rem; color:var(--muted); margin-top:6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Trinity memorial university 2.png" alt="TMU logo">
+    <div>
+      <h1>Trinity Memorial University</h1>
+      <p>Where knowledge meets compassion — Admissions Portal</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="card form-grid" role="main">
+      <div class="left">
+        <h2>Create your student account</h2>
+        <p>Fill the form below — TMU offers affordable programs and scholarships for deserving students.</p>
+
+        <form id="registerForm" autocomplete="on" novalidate>
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="e.g. Folashade Adeyemi" required>
+
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@domain.com" required>
+
+          <label for="program">Select program</label>
+          <select id="program" name="program" required>
+            <option value="">-- Select program --</option>
+            <optgroup label="Faculty of Science">
+              <option>Computer Science</option>
+              <option>Biochemistry</option>
+              <option>Mathematics</option>
+              <option>Physics</option>
+            </optgroup>
+            <optgroup label="Faculty of Engineering">
+              <option>Civil Engineering</option>
+              <option>Mechanical Engineering</option>
+            </optgroup>
+            <optgroup label="Faculty of Business">
+              <option>Business Administration</option>
+              <option>Accounting</option>
+              <option>Marketing</option>
+            </optgroup>
+            <optgroup label="Faculty of Arts & Social Sciences">
+              <option>Political Science</option>
+              <option>Sociology</option>
+            </optgroup>
+          </select>
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Create a secure password" minlength="6" required>
+
+          <label for="confirmPassword">Confirm password</label>
+          <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Repeat your password" minlength="6" required>
+
+          <div class="submit-row">
+            <button id="submitBtn" class="primary" type="submit">Create account</button>
+            <div class="small-help">Already have an account? <a class="small" href="login.html">Login</a></div>
+          </div>
+
+          <div id="message" class="msg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <aside class="right" aria-label="Why join TMU?">
+        <h3>Why choose TMU?</h3>
+        <ul>
+          <li>Affordable tuition & flexible payment plans</li>
+          <li>Scholarships for outstanding and needy students</li>
+          <li>Hands-on learning, labs and industry projects</li>
+          <li>Vibrant student clubs, sports and arts</li>
+        </ul>
+        <p class="small-help">By registering you agree to TMU's student code of conduct. We hash passwords and never store plain text credentials.</p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- JS: posts to backend and gives clear messages -->
+  <script>
+    (function () {
+      const form = document.getElementById('registerForm');
+      const msg = document.getElementById('message');
+      const submitBtn = document.getElementById('submitBtn');
+
+      function showMessage(type, text, autoHide = true) {
+        msg.className = 'msg show ' + (type === 'ok' ? 'success' : 'error');
+        msg.textContent = text;
+        if (autoHide) {
+          setTimeout(() => { msg.className = 'msg'; }, 6000);
+        }
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // simple client validation
+        const Name = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const program = document.getElementById('program').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (!Name || !email || !password || !confirmPassword) {
+          showMessage('err', 'Please fill all required fields.');
+          return;
+        }
+        if (password.length < 6) {
+          showMessage('err', 'Password should be at least 6 characters.');
+          return;
+        }
+        if (password !== confirmPassword) {
+          showMessage('err', 'Passwords do not match.');
+          return;
+        }
+
+        // disable while sending
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Creating account...';
+
+        try {
+          const res = fetch("http://localhost:5000/api/auth/register",
+ {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ fullname, email, password })
+})
+
+          const data = await res.json();
+          console.log('server response:', data);
+
+          if (res.ok) {
+            showMessage('ok', data.message || data.msg || 'Account created. Redirecting…');
+            form.reset();
+            // redirect to login after short delay
+            setTimeout(() => { window.location.href = 'login.html'; }, 1400);
+          } else {
+            // server returned an error (400, 409, etc.)
+            showMessage('err', data.message || data.msg || JSON.stringify(data));
+          }
+        } catch (err) {
+          console.error('Network error:', err);
+          showMessage('err', 'Unable to reach server. Is your backend running?');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Create account';
+        }
+      });
+    })();
+document.getElementById("registerForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const res = await fetch("/api/auth/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, password })
+  });
+
+  const data = await res.json();
+
+  if (res.ok) {
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("user", JSON.stringify(data.user));
+    window.location.href = "dashboard.html"; // ✅ redirect after register
+  } else {
+    alert(data.message);
+  }
+});
+</script>
+</body>
+</html>

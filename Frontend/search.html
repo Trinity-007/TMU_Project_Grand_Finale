@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results - TMU</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra search page styles */
+    .search-results {
+      width: 85%;
+      margin: 2rem auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .search-results h2 {
+      color: #005f73;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .search-results ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .search-results ul li {
+      margin: 0.8rem 0;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f9f9f9;
+      transition: background 0.3s ease;
+    }
+
+    .search-results ul li:hover {
+      background-color: #e0f7fa;
+    }
+
+    .search-results a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #0077b6;
+    }
+
+    .search-results a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Search Results</h1>
+    <p><a href="index.html" style="color: #d0f0f8; text-decoration:none;">⬅ Back to Home</a></p>
+  </header>
+
+  <main class="search-results">
+    <h2 id="search-title"></h2>
+    <div id="search-results"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Trinity Memorial University. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Keywords and matching pages
+    const pages = [
+      { keywords: ["admission", "apply", "register"], link: "admissions.html", title: "Admissions Info" },
+      { keywords: ["academics", "faculty", "programs", "courses"], link: "academics.html", title: "Academic Programs" },
+      { keywords: ["science", "computer science", "biology", "physics"], link: "faculty_science.html", title: "Faculty of Science" },
+      { keywords: ["arts", "history", "literature"], link: "faculty_arts.html", title: "Faculty of Arts" },
+      { keywords: ["engineering", "tech", "technology"], link: "faculty_engineering.html", title: "Faculty of Engineering" },
+      { keywords: ["student life", "campus", "clubs", "hostel"], link: "student_life.html", title: "Student Life" },
+      { keywords: ["staff", "faculty members", "professors"], link: "staffs_and_faculty.html", title: "Staff & Faculty" },
+      { keywords: ["login", "portal", "account"], link: "login.html", title: "Student Login Portal" },
+      { keywords: ["contact", "address", "phone"], link: "contact.html", title: "Contact TMU" },
+      { keywords: ["news", "events"], link: "news/events.html", title: "News & Events" }
+    ];
+
+    // Get query from URL
+    const params = new URLSearchParams(window.location.search);
+    const query = (params.get("query") || "").toLowerCase().trim();
+
+    const resultsDiv = document.getElementById("search-results");
+    document.getElementById("search-title").textContent =
+      query ? `Results for: "${query}"` : "No search term provided.";
+
+    if (query) {
+      const matched = pages.filter(page =>
+        page.keywords.some(kw => query.includes(kw))
+      );
+
+      if (matched.length > 0) {
+        let list = "<ul>";
+        matched.forEach(m => {
+          list += `<li><a href="${m.link}">${m.title}</a></li>`;
+        });
+        list += "</ul>";
+        resultsDiv.innerHTML = list;
+      } else {
+        resultsDiv.innerHTML = `<p>No exact matches found. Try searching for "Admissions", "Academics", or "Student Life".</p>`;
+      }
+    } else {
+      resultsDiv.textContent = "No search term provided.";
+    }
+  </script>
+</body>
+</html>

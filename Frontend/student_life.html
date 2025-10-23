@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Life | Trinity Memorial University</title>
+
+  <!-- IMPORTANT: make sure this filename matches your CSS file exactly -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- quick inline test style (safe to remove after verifying) -->
+  <style>
+    /* quick test: if you see these green borders, inline styles are working */
+    /* remove this <style> after you confirm the main CSS works */
+    .student-life .life-section { border: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Trinity memorial university 2.png" alt="TMU Logo" width="90">
+    <h1>Trinity Memorial University</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="news-events.html">News & Events</a></li>
+        <li><a href="student_life.html" class="active">Student Life</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- page wrapper for more specific CSS targeting -->
+  <main class="page student-life-page">
+    <section class="student-life">
+      <header class="student-life-header">
+        <h2>Student Life at TMU</h2>
+        <p>More than lectures — a vibrant community where students grow, lead and belong.</p>
+      </header>
+
+      <div class="life-section">
+        <img src="Group disco.jpg" alt="Campus community" loading="lazy">
+        <div>
+          <h3>Clubs & Organizations</h3>
+          <p>TMU supports a wide range of student-led clubs — tech societies, cultural unions, debate teams, and social entrepreneurship groups. They help students build leadership, practical skills and lifelong friendships.</p>
+        </div>
+      </div>
+
+      <div class="life-section reverse">
+        <div>
+          <h3>Sports & Recreation</h3>
+          <p>From football, athletics and basketball to yoga and fitness classes, our sports programs encourage healthy living, teamwork and school spirit. Facilities are available for intramurals and competitive events.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1400&q=80" alt="Sports at TMU" loading="lazy">
+      </div>
+
+      <div class="life-section">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80" alt="Campus culture" loading="lazy">
+        <div>
+          <h3>Arts, Culture & Events</h3>
+          <p>TMU hosts concerts, art exhibitions, cultural nights and speaker series that celebrate diversity and creativity — making campus life a lively and memorable experience.</p>
+        </div>
+      </div>
+
+      <div class="life-section">
+        <div>
+          <h3>Support & Student Services</h3>
+          <p>Counselling, career guidance, academic tutoring and financial-aid advising are available to support students’ well-being and success on campus and beyond.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1400&q=80" alt="Student support" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Trinity Memorial University</p>
+  </footer>
+</body>
+</html>

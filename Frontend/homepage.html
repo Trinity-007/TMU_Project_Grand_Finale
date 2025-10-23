@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinity Memorial University - Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero section */
+    .homepage-hero {
+      background: linear-gradient(rgba(0, 47, 73, 0.7), rgba(0, 47, 73, 0.7)), url("Students-on-campus-60_2-scaled.jpg") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    .homepage-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .homepage-hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    .homepage-hero a {
+      background: #0a9396;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .homepage-hero a:hover {
+      background: #007a88;
+    }
+
+    /* Quick links grid */
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem auto;
+      width: 85%;
+    }
+    .quick-links .card {
+      text-align: center;
+      padding: 2rem;
+      background: #f9f9f9;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .quick-links .card:hover {
+      transform: translateY(-5px);
+    }
+    .quick-links a {
+      text-decoration: none;
+      color: #005f73;
+      font-weight: bold;
+    }
+
+    /* Latest news/events */
+    .news-events {
+      background: #f1faff;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+    }
+    .news-events h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 2rem;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .news-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .news-card h3 {
+      color: #006d77;
+      margin-bottom: 0.5rem;
+    }
+    .news-card p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Trinity memorial university 2.png" alt="TMU Logo" width="100">
+    <h1>Trinity Memorial University</h1>
+    <p>Where knowledge meets compassion.</p>
+
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="news/events.html">News & Events</a></li>
+        <li><a href="student_life.html">Student Life</a></li>
+        <li><a href="staffs_and_faculty.html">Staff & Faculty</a></li>
+        <li><a href="login.html">Login Portal</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div>
+        <form action="search.html" method="get">
+          <input type="text" name="query" placeholder="Search..." required>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="homepage-hero">
+    <h1>Welcome to Trinity Memorial University</h1>
+    <p>Building leaders with knowledge, compassion, and excellence.</p>
+    <a href="admissions.html">Apply Now</a>
+  </section>
+
+  <!-- Quick links -->
+  <section class="quick-links">
+    <div class="card"><a href="admissions.html">🎓 Admissions</a></div>
+    <div class="card"><a href="academics.html">📚 Academic Programs</a></div>
+    <div class="card"><a href="student_life.html">🏫 Student Life</a></div>
+    <div class="card"><a href="news/events.html">📰 News & Events</a></div>
+    <div class="card"><a href="contact.html">📞 Contact Us</a></div>
+  </section>
+
+  <!-- News/Events -->
+  <section class="news-events">
+    <h2>Latest News & Events</h2>
+    <div class="news-grid">
+      <div class="news-card">
+        <h3>New Research Initiative</h3>
+        <p>TMU launches a new global research program addressing climate change and technology innovation.</p>
+      </div>
+      <div class="news-card">
+        <h3>TMU 50th Anniversary</h3>
+        <p>Celebrating 50 years of knowledge and service to the African continent and beyond.</p>
+      </div>
+      <div class="news-card">
+        <h3>Sports Day 2025</h3>
+        <p>Join us on October 10th for our annual Sports Day filled with competition, fun, and community spirit.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Trinity Memorial University. All rights reserved.</p>
+    <p>
+      Follow us on:
+      <a href="https://facebook.com/TMU">Facebook</a>,
+      <a href="https://twitter.com/TMU">Twitter</a>,
+      <a href="https://instagram.com/TMU">Instagram</a>
+    </p>
+    
+  </footer>
+</body>
+</html>

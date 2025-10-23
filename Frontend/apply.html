@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply - Trinity Memorial University</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Success message style */
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Apply to Trinity Memorial University</h1>
+    <p>Please fill out the form below to apply for admission.</p>
+  </header>
+
+  <main class="apply-form">
+    <form id="applyForm">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="program">Select Program:</label>
+      <select id="program" name="program">
+        <option value="">-- Select Program --</option>
+        <option value="computer-science">Computer Science</option>
+        <option value="biochemistry">Biochemistry</option>
+        <option value="mathematics">Mathematics</option>
+        <option value="physics">Physics</option>
+        <option value="chemistry">Chemistry</option>
+        <option value="microbiology">Microbiology</option>
+        <option value="civil-engineering">Civil Engineering</option>
+        <option value="mechanical-engineering">Mechanical Engineering</option>
+        <option value="economics">Economics</option>
+        <option value="political-science">Political Science</option>
+        <option value="sociology">Sociology</option>
+        <option value="accounting">Accounting</option>
+        <option value="business-admin">Business Administration</option>
+        <option value="banking-finance">Banking & Finance</option>
+        <option value="marketing">Marketing</option>
+        <option value="public-admin">Public Administration</option>
+      </select>
+
+      <label for="statement">Why do you want to study this program?</label>
+      <textarea id="statement" name="statement" rows="5" required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+      ✅ Application submitted successfully! We will contact you soon.
+    </div>
+  </main>
+
+  <!-- JS Script -->
+  <script>
+    // Pre-fill program from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const program = urlParams.get("program");
+    if (program) {
+      document.getElementById("program").value = program;
+    }
+
+    // Handle form submission
+    const form = document.getElementById("applyForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // stop page reload
+
+      // Show success message
+      successMessage.style.display = "block";
+
+      // Clear form
+      form.reset();
+
+      // Optional: auto-hide message after 5 seconds
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

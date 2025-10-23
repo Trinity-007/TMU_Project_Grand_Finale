@@ -1,0 +1,625 @@
+/* Reset some defaults */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f9ff;
+    color: #222;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #005f73, #0a9396);
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #d0f0f8;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #002e2e;
+    padding: 0.5rem 0;
+}
+
+nav ul li {
+    margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #0a9396;
+}
+
+form {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 0.4rem;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 0.4rem 0.8rem;
+    background-color: #0a9396;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007a88;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    color: #005f73;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.hero img {
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+/* Card Style */
+.card {
+    background-color: #e0f7fa;
+    border-left: 5px solid #005f73;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: 85%;
+    border-radius: 8px;
+}
+
+.card h2, .card h3 {
+    color: #003d4d;
+    margin-bottom: 0.6rem;
+}
+
+/* Hero content */
+.hero-content {
+    padding: 2rem;
+    background-color: #f1faff;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    color: #0077b6;
+    margin-top: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Figure Styling */
+figure {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+figure img {
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+figcaption {
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Articles */
+article {
+    background-color: #fff;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 85%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+article h2 {
+    color: #006d77;
+    margin-bottom: 0.5rem;
+}
+
+article h3 {
+    color: #333;
+    margin-top: 1rem;
+}
+
+article p {
+    margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: #023047;
+    color: #f0f8ff;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #90e0ef;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Academics Page */
+.academics {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.academics h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #004080;
+}
+
+.faculty {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.faculty h2 {
+  color: #00264d;
+  margin-bottom: 0.8rem;
+}
+
+.faculty ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.faculty li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Academics Page */
+.academics {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.faculty {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faculty:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.faculty h2 {
+  color: #004080;
+  margin-bottom: 0.8rem;
+}
+
+.faculty ul {
+  list-style: none;
+  padding: 0;
+}
+
+.faculty li {
+  margin: 0.5rem 0;
+}
+
+.faculty a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.faculty a:hover {
+  color: #004080;
+  text-decoration: underline;
+}
+
+/* Apply Page */
+.apply-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.apply-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-form label {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #004080;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  width: 100%;              /* Make them all full width */
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;   /* Prevent overflow issues */
+}
+
+.apply-form button {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #004080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.apply-form button:hover {
+  background: #00264d;
+}
+/* ===== ABOUT PAGE STYLING ===== */
+.about-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #005f73;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.about-container h2 {
+    font-size: 1.6rem;
+    margin: 1.5rem 0 0.8rem;
+    color: #0a9396;
+    border-left: 5px solid #005f73;
+    padding-left: 0.8rem;
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-container ul {
+    margin: 1rem 0 2rem 2rem;
+    padding: 0;
+    list-style: disc;
+    color: #333;
+}
+
+.about-container ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.about-container section {
+    margin-bottom: 2rem;
+}
+
+.about-container strong,
+.about-container em {
+    color: #0077b6;
+    font-weight: bold;
+}
+
+/* Apply Now button */
+.apply-btn {
+    display: inline-block;
+    background: #0a9396;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.apply-btn:hover {
+    background: #005f73;
+}
+
+/* ===== Student Life Page Styling ===== */
+.student-life-page .student-life {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.student-life-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.student-life-header h2 {
+  font-size: 2rem;
+  color: #005f73;
+  margin-bottom: .5rem;
+}
+.student-life-header p {
+  color: #333;
+  font-size: 1.05rem;
+}
+
+/* life sections */
+.student-life .life-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.25rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.student-life .life-section img {
+  width: 50%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.student-life .life-section div {
+  flex: 1;
+}
+
+.student-life .life-section h3 {
+  margin-top: 0;
+  color: #003d59;
+  font-size: 1.4rem;
+}
+
+.student-life .life-section p {
+  color: #444;
+  line-height: 1.7;
+  margin-top: .5rem;
+}
+
+/* reverse layout for alternating sections */
+.student-life .life-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* responsive */
+@media (max-width: 880px) {
+  .student-life .life-section {
+    flex-direction: column;
+  }
+  .student-life .life-section img {
+    width: 100%;
+    max-height: 260px;
+  }
+}
+
+/* small helper for nav active link look if needed */
+nav ul li a.active { background: rgba(10,147,150,0.12); border-radius: 6px; padding: .25rem .5rem; }
+
+/* ===== Contact Page Styling ===== */
+.contact-page {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact-header h2 {
+  font-size: 2rem;
+  color: #005f73;
+}
+.contact-header p {
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.contact-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-form, .contact-info {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.contact-form h3, .contact-info h3 {
+  margin-bottom: 1rem;
+  color: #003d59;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #005f73;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0a9396;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* ===== Faculty Page Styling ===== */
+.faculty-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.faculty-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.faculty-header h2 {
+  font-size: 2.2rem;
+  color: #005f73;
+}
+.faculty-header p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.faculty-card {
+  background: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+.faculty-card:hover {
+  transform: translateY(-5px);
+}
+
+.faculty-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.faculty-card h3 {
+  color: #003d59;
+  margin-bottom: 0.3rem;
+}
+
+.faculty-card p {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.faculty-card .bio {
+  font-size: 0.95rem;
+  color: #666;
+}
+
